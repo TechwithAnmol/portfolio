@@ -74,7 +74,25 @@ def get_response(question):
 
 @app.route('/')
 def index():
-    return render_template('index.html', css_file="static\css\style.css")
+    return render_template('index.html', css_file="static/css/style.css")
+
+@app.route('/index.html')
+def indexreturn():
+    return render_template('index.html', css_file="static/css/style.css")
+
+@app.route('/portfolio-details.html')
+def portfolio_details():
+    return render_template('portfolio-details.html', css_file="static/css/style.css")
+
+@app.route('/portfolio-details copy.html')
+def portfolio_details_copy():
+    return render_template('portfolio-details copy.html', css_file="static/css/style.css")
+
+@app.route('/portfolio-details copy 2.html')
+def portfolio_details_copy2():
+    return render_template('portfolio-details copy 2.html', css_file="static/css/style.css")
+
+
 
 @app.route('/get_response', methods=['POST'])
 def get_user_question():
